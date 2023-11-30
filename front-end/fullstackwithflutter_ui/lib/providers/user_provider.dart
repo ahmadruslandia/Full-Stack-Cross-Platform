@@ -7,5 +7,5 @@ final UserRepositoryProvider =
 
 final usersList = FutureProvider.autoDispose<UserListResponse>((ref) async {
   final repository = ref.watch(UserRepositoryProvider);
-  return repository.fetchUserList();
+  return repository.fetchUsersList();
 });
