@@ -74,10 +74,10 @@ packages:
     dependency: "direct main"
     description:
       name: flutter_riverpod
-      sha256: d84e180f039a6b963e610d2e4435641fdfe8f12437e8770e963632e05af16d80
+      sha256: "2fd9f58a39b7269cb3495b09245000fcd267243518157a7c2f832189fb64f013"
       url: "https://pub.dev"
     source: hosted
-    version: "1.0.4"
+    version: "3.0.0-dev.3"
   flutter_test:
     dependency: "direct dev"
     description: flutter
@@ -87,10 +87,10 @@ packages:
     dependency: "direct main"
     description:
       name: http
-      sha256: "5895291c13fa8a3bd82e76d5627f69e0d85ca6a30dcac95c4ea19a5d555879c2"
+      sha256: d4872660c46d929f6b8a9ef4e7a7eff7e49bbf0c4ec3f385ee32df5119175139
       url: "https://pub.dev"
     source: hosted
-    version: "0.13.6"
+    version: "1.1.2"
   http_parser:
     dependency: transitive
     description:
@@ -143,10 +143,10 @@ packages:
     dependency: transitive
     description:
       name: riverpod
-      sha256: e7f097159b9512f5953ff544164c19057f45ce28fd0cb971fc4cad1f7b28217d
+      sha256: "0f41a697a17609a7ac18e5fe0d5bdbe4c1ff7e7da6523baf46a203df0c44eaf2"
       url: "https://pub.dev"
     source: hosted
-    version: "1.0.3"
+    version: "3.0.0-dev.3"
   sky_engine:
     dependency: transitive
     description: flutter

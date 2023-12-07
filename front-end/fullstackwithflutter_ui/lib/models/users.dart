@@ -47,3 +47,28 @@ class User {
     return _data;
   }
 }
+
+class UserResponse {
+  UserResponse({
+    required this.status,
+    required this.message,
+    required this.data,
+  });
+  late final bool status;
+  late final String message;
+  late final User? data;
+
+  UserResponse.fromJson(Map<String, dynamic> json) {
+    status = json['status'];
+    message = json['message'];
+    data = (json['data'] != null) ? User.fromJson(json['data']) : null;
+  }
+
+  Map<String, dynamic> toJson() {
+    final _data = <String, dynamic>{};
+    _data['status'] = status;
+    _data['message'] = message;
+    _data['data'] = data!.toJson();
+    return _data;
+  }
+}

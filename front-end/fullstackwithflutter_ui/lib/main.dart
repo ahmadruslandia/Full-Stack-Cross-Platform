@@ -2,6 +2,7 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:fullstackwithflutter_ui/screens/userform_screen.dart';
 import 'package:fullstackwithflutter_ui/screens/userlist_screen.dart';
 
 class MyHttpOverrides extends HttpOverrides {
@@ -31,6 +32,10 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       home: const UserListScreen(),
+      routes: {
+        UserListScreen.routeName: (ctx) => const UserListScreen(),
+        UserFormScreen.routeName: (ctx) => const UserFormScreen(),
+      },
     );
   }
 }
