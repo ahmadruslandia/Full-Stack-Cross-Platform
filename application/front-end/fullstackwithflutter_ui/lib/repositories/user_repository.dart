@@ -11,8 +11,14 @@ abstract class IUserRepository {
 }
 
 class UserRepository implements IUserRepository {
-  //final _host = "https://192.168.163.200:44371/api/User/";
-  //final _host = "https://localhost:44371/api/User/";
+  final _host = "https://192.168.128.200:44371/api/User/";
+
+  /*
+  - Mobile Emulator + Desktop
+    final _host = "https://192.000.000.000:44371/api/User/";
+  - WEB
+    final _host = "https://localhost:44371/api/User/";
+  */
 
   final Map<String, String> _headers = {
     HttpHeaders.acceptHeader: "application/json",
