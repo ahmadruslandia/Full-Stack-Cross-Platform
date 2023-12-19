@@ -4,7 +4,7 @@ import 'package:fullstack/models/users.dart';
 import 'package:fullstack/providers/user_provider.dart';
 
 class UserFormScreen extends StatelessWidget {
-  const UserFormScreen({Key? key}) : super(key: key);
+  const UserFormScreen({super.key});
 
   static const String routeName = "/userform";
 
@@ -18,7 +18,6 @@ class UserFormScreen extends StatelessWidget {
       ),
       body: Center(
         child: Column(children: const [
-          Text("test"),
           UserForm(),
         ]),
       ),

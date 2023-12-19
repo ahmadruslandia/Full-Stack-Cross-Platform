@@ -3,6 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:fullstack/models/users.dart';
 import 'package:fullstack/providers/user_provider.dart';
 import 'package:fullstack/screens/userform_screen.dart';
+import 'package:fullstack/screens/userview_screen.dart';
 
 class UserListScreen extends StatelessWidget {
   const UserListScreen({super.key});
@@ -18,7 +19,7 @@ class UserListScreen extends StatelessWidget {
         title: const Text("USER LIST"),
       ),
       body: Center(
-        child: Column(children: const [Text("Test"), UsersListView()]),
+        child: Column(children: const [UsersListView()]),
       ),
       floatingActionButton: FloatingActionButton.extended(
         onPressed: () {
@@ -46,9 +47,17 @@ class UsersListView extends ConsumerWidget {
                 return Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Card(
-                    child: ListTile(
-                      title: Text(users.data[index].fullName),
-                      subtitle: Text(users.data[index].mobileNumber.toString()),
+                    child: GestureDetector(
+                      onTap: () {
+                        Navigator.of(context).pushNamed(
+                            UserViewScreen.routeName,
+                            arguments: users.data[index].id.toString());
+                      },
+                      child: ListTile(
+                        title: Text(users.data[index].fullName),
+                        subtitle:
+                            Text(users.data[index].mobileNumber.toString()),
+                      ),
                     ),
                   ),
                 );

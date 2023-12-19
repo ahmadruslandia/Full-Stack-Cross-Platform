@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:fullstack/screens/userform_screen.dart';
 import 'package:fullstack/screens/userlist_screen.dart';
+import 'package:fullstack/screens/userview_screen.dart';
 
 class MyHttpOverrides extends HttpOverrides {
   @override
@@ -35,6 +36,9 @@ class MyApp extends StatelessWidget {
       routes: {
         UserListScreen.routeName: (ctx) => const UserListScreen(),
         UserFormScreen.routeName: (ctx) => const UserFormScreen(),
+        UserViewScreen.routeName: (ctx) => UserViewScreen(
+              userObject: ModalRoute.of(ctx)!.settings.arguments,
+            )
       },
     );
   }

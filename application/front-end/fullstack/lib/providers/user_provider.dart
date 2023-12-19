@@ -11,6 +11,12 @@ final usersList = FutureProvider.autoDispose<UserListResponse>((ref) {
   return repository.fetchUsersList();
 });
 
+final singleUserProvider =
+    FutureProvider.autoDispose.family<UserResponse, int>((ref, userId) {
+  final repository = ref.watch(UserRepositoryProvider);
+  return repository.getUserById(userId);
+});
+
 class UserFormNotifier extends ChangeNotifier {
   UserFormNotifier(this.ref) : super();
   final Ref ref;
