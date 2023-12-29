@@ -9,20 +9,20 @@
     }
   },
   "profiles": {
-    "IIS Express": {
-      "commandName": "IISExpress",
+    "FullStack": {
+      "commandName": "Project",
       "launchBrowser": true,
       "launchUrl": "swagger",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
-      }
+      },
+      "applicationUrl": "https://192.168.19.172:44371;http://192.168.19.172:47354",
+      "dotnetRunMessages": "true"
     },
-    "FullStack": {
-      "commandName": "Project",
-      "dotnetRunMessages": "true",
+    "IIS Express": {
+      "commandName": "IISExpress",
       "launchBrowser": true,
       "launchUrl": "swagger",
-      "applicationUrl": "https://192.168.81.200:44371;http://localhost:47354",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
