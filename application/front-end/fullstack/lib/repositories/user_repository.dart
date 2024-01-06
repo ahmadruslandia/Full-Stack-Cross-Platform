@@ -12,7 +12,7 @@ abstract class IUserRepository {
 }
 
 class UserRepository implements IUserRepository {
-  final _host = "https://192.168.19.172:44371/api/User/";
+  final _host = "https://192.168.202.172:5001/api/User/";
 
   /*
     - Mobile Emulator + Desktop
