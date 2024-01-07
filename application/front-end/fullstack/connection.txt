@@ -1,0 +1,5 @@
+- Mobile Emulator + Desktop
+  final _host = "https://<your_ip>:<your_port>/api/User/";
+
+- WEB
+  final _host = "https://localhost:<your_port>/api/User/";
